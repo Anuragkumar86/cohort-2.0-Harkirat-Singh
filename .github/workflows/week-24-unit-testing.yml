@@ -1,0 +1,34 @@
+name: Week24 - Unit Tests
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "Week24/Testing-In-MERN/Unit-Testing/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "Week24/Testing-In-MERN/Unit-Testing/**"
+
+jobs:
+  unit-tests:
+    runs-on: ubuntu-latest
+
+    defaults:
+      run:
+        working-directory: Week24/Testing-In-MERN/Unit-Testing
+
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: npm install && npx prisma generate
+
+      - name: Run unit tests
+        run: npm test

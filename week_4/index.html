@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+    <script>
+        let timeout;
+        function debouncePopulateDiv(){
+            clearTimeout(timeout)
+            timeout = setTimeout(function() {
+                populate()
+            }, 1000)
+        }
+
+        function populate() {
+            // alert("hiiii")
+            let a = document.getElementById("firstnumber").value;
+            let b = document.getElementById("secondnumber").value;
+            const element = document.getElementById("result");
+            element.innerHTML = parseInt(a) + parseInt(b);
+        }
+    </script>
+<body>
+    <!-- <input id="firstnumber" type="text" placeholder="Enter first number"></input><br></br>
+    <input id="secondnumber" type="text" placeholder="Enter second number"></input><br></br> -->
+    <input oninput="debouncePopulateDiv()" id="firstnumber" type="text" placeholder="Enter first number"></input><br></br>
+    <input oninput="debouncePopulateDiv()" id="secondnumber" type="text" placeholder="Enter second number"></input><br></br>
+    <!-- <button onclick="populate()">Calculate</button><br></br> -->
+    <div id="result"></div>
+</body>
+</html>

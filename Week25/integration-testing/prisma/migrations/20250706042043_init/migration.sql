@@ -1,0 +1,13 @@
+-- CreateEnum
+CREATE TYPE "Type" AS ENUM ('ADD', 'MULTIPLY');
+
+-- CreateTable
+CREATE TABLE "request" (
+    "id" SERIAL NOT NULL,
+    "a" INTEGER NOT NULL,
+    "b" INTEGER NOT NULL,
+    "type" "Type" NOT NULL,
+    "result" INTEGER NOT NULL,
+
+    CONSTRAINT "request_pkey" PRIMARY KEY ("id")
+);

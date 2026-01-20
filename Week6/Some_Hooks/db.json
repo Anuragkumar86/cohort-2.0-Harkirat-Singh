@@ -1,0 +1,80 @@
+{
+    "todos": [
+      {
+        "id": 1,
+        "title": "Learn React",
+        "description": "Understand the basics of React"
+      },
+      {
+        "id": 2,
+        "title": "Set up JSON Server",
+        "description": "Install and configure JSON Server"
+      },
+      {
+        "id": 3,
+        "title": "Build To-Do App",
+        "description": "Create a to-do app using React and JSON Server"
+      },
+      {
+        "id": 4,
+        "title": "Learn JavaScript",
+        "description": "Deep dive into JavaScript fundamentals"
+      },
+      {
+        "id": 5,
+        "title": "Study CSS Flexbox",
+        "description": "Master layout design with CSS Flexbox"
+      },
+      {
+        "id": 6,
+        "title": "Explore Redux",
+        "description": "Learn state management with Redux"
+      },
+      {
+        "id": 7,
+        "title": "Build a Portfolio Website",
+        "description": "Create a personal portfolio to showcase projects"
+      },
+      {
+        "id": 8,
+        "title": "Practice Git",
+        "description": "Get comfortable with version control using Git"
+      },
+      {
+        "id": 9,
+        "title": "Learn TypeScript",
+        "description": "Add static typing to JavaScript with TypeScript"
+      },
+      {
+        "id": 10,
+        "title": "Understand REST APIs",
+        "description": "Learn how to interact with RESTful APIs"
+      },
+      {
+        "id": 11,
+        "title": "Learn Node.js",
+        "description": "Build server-side applications with Node.js"
+      },
+      {
+        "id": 12,
+        "title": "Master Express.js",
+        "description": "Create RESTful APIs using Express.js"
+      },
+      {
+        "id": 13,
+        "title": "Study MongoDB",
+        "description": "Learn NoSQL database management with MongoDB"
+      },
+      {
+        "id": 14,
+        "title": "Implement Authentication",
+        "description": "Secure applications with user authentication"
+      },
+      {
+        "id": 15,
+        "title": "Deploy Applications",
+        "description": "Deploy web applications to cloud platforms"
+      }
+    ]
+  }
+  
