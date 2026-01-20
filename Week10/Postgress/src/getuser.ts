@@ -34,3 +34,5 @@ async function getUser(email: string) {
 
 // Example usage
 getUser('jane.smith@example.com').catch(console.error);
+
+
