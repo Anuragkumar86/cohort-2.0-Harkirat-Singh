@@ -14,6 +14,10 @@ jobs:
   test:
     runs-on: ubuntu-latest
 
+    jobs:
+  test:
+    runs-on: ubuntu-latest
+
     steps:
       - name: Checkout code
         uses: actions/checkout@v3
@@ -22,6 +26,13 @@ jobs:
         run: |
           docker version
           docker compose version
+
+      - name: Debug file structure
+        run: |
+          pwd
+          ls
+          ls Week25
+          ls Week25/INTEGRATION-REVISION
 
       - name: Install dependencies
         working-directory: Week25/INTEGRATION-REVISION
@@ -34,3 +45,4 @@ jobs:
       - name: Run integration tests
         working-directory: Week25/INTEGRATION-REVISION
         run: npm run test:integration
+
