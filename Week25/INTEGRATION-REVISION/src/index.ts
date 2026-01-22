@@ -25,7 +25,7 @@ app.post("/sum", async (req, res) => {
     } catch (error) {
         console.error("Prisma error:", error);
         res.status(500).json({
-            message: "Internal server error",
+            message: "Internal server error AA gya bhai",
         });
         return;
     }
