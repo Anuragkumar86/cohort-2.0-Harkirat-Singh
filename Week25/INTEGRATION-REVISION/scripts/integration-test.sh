@@ -1,6 +1,20 @@
-docker-compose up -d
-echo '🟡 - Waiting for database to be ready...'
-./scripts/wait-for-it.sh "postgresql://postgres:mysecretpassword@localhost:5432/postgres" -- echo '🟢 - Database is ready!'
-npx prisma migrate dev --name init
-npm run test
-docker-compose down
+#!/usr/bin/env bash
+set -e
+
+echo "🚀 Starting database..."
+docker compose up -d
+
+echo "🟡 Waiting for database to be ready..."
+bash ./scripts/wait-for-it.sh localhost:5433 --timeout=30
+
+echo "📦 Generating Prisma client..."
+npx prisma generate
+
+echo "🗄️ Running migrations..."
+npx prisma migrate deploy
+
+echo "🧪 Running tests..."
+npm test
+
+echo "🧹 Cleaning up..."
+docker compose down -v
